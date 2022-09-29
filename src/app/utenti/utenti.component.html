@@ -1,0 +1,21 @@
+ <h2>I Miei Utenti</h2>
+<ul class="utenti">
+  <li *ngFor="let user to users">
+    <button type="button" (click)="onSelect(hero)">
+      <span class="badge">{{utente.id}}</span>
+      <span class="name">{{utente.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-user-detail [utente]="selectedUtente"></app-user-detail>
+
+<div *ngIf="selectedUtente">
+  <h2>{{selectedUtente.name | uppercase}} Details</h2>
+  <div>id: {{selectedUtente.id}}</div>
+  <div>
+    <label for="utente-name">Hero name: </label>
+    <input id="utente-name" [(ngModel)]="selectedUtente.name" placeholder="name">
+  </div>
+</div>
+
