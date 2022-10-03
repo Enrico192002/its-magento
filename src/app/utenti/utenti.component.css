@@ -1,15 +1,15 @@
-.utenti {
+.utente {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
   }
   
-  .utenti li {
+  .utente li {
     display: flex;
   }
   
-  .utenti button {
+  .utente button {
     flex: 1;
     cursor: pointer;
     position: relative;
@@ -23,33 +23,33 @@
     height: 1.8em;
   }
   
-  .utenti button:hover {
+  .utente button:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
     left: .1em;
   }
   
-  .utenti button:active {
+  .utente button:active {
     background-color: #525252;
     color: #fafafa;
   }
   
-  .utenti button.selected {
+  .utente button.selected {
     background-color: black;
     color: white;
   }
   
-  .utenti button.selected:hover {
+  .utente button.selected:hover {
     background-color: #505050;
     color: white;
   }
   
-  .utenti button.selected:active {
+  .utente button.selected:active {
     background-color: black;
     color: white;
   }
   
-  .utenti .badge {
+  .utente .badge {
     display: inline-block;
     font-size: small;
     color: white;
@@ -60,6 +60,6 @@
     border-radius: 4px 0 0 4px;
   }
   
-  .utenti .name {
+  .utente .name {
     align-self: center;
   }

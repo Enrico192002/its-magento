@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LISTAUTENTI } from '../listautenti';
 import { Utente }from '../utente';
-import { LISTAUTENTI } from '../lista-utenti';
-import { UtenteService } from '../utente.service';
-import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-utenti',
@@ -10,26 +8,19 @@ import { MessageService } from '../message.service';
   styleUrls: ['./utenti.component.css']
 })
 export class UtentiComponent implements OnInit {
-  selectedHero?: Utente;
+  utente = LISTAUTENTI;
+  selectedUtente?: Utente;
 
-  utente: Utente[] = [];
 
-  constructor(private utenteService: UtenteService, private messageService: MessageService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getUtente();
   }
 
   onSelect(utente: Utente): void {
-    this.selectedHero = utente;
-    this.messageService.add(`utentiComponent: Selected utente id=${utente.id}`);
+    this.selectedUtente = utente;
   }
 
-
-  getUtente(): void {
-    this.utenteService.getUtente()
-        .subscribe(utente => this.utente = utente);
-  }
 
 }
 
